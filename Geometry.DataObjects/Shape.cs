@@ -5,6 +5,10 @@ using System.Text;
 
 namespace Geometry.DataObjects
 {
+    /// <summary>
+    /// Base class for Rectangles and Lines. Used as a data container to communicate the product of the relationship (e.g. the interecting area) to the
+    /// end-user.
+    /// </summary>
     [Serializable()]
     [DataContract()]
     public class Shape :IShape

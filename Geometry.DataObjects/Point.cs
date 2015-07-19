@@ -6,6 +6,9 @@ using System.Text;
 
 namespace Geometry.DataObjects
 {
+    /// <summary>
+    /// Encapuslates a vertix of a shape. PointDO is the minimal building block for Lines and Rectangles
+    /// </summary>
     [Serializable()]
     [DataContract()]
     public class PointDO : IEquatable<PointDO>

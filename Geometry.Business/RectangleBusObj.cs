@@ -32,7 +32,7 @@ namespace Geometry.Business
         }
         
         /// <summary>
-        /// 
+        /// Builds the complete <see cref="RelationshipDO"/> object
         /// </summary>
         /// <param name="r1">Larger rectangle, if different</param>
         /// <param name="r2">Smaller rectangle, if different</param>
@@ -50,14 +50,21 @@ namespace Geometry.Business
                 //second rectangle is fully within the first one
                 if (insidePoints.Count + borderPoints.Count == 4)
                 {
-                    result.Type = RelationshipType.Containment;
-                    result.CompResult = r2;
+                    if (equalSize)
+                    {
+                        result.Type = RelationshipType.FullOverlap;
+                    }
+                    else
+                    {
+                        result.Type = RelationshipType.Containment;
+                        result.CompResult = r2;
+                    }
                 }
                 //smaller r2 intersecting with r1
                 else if (insidePoints.Count == 2 && borderPoints.Count == 0 || insidePoints.Count == 1 && borderPoints.Count == 1)
                 {
                     result.Type = RelationshipType.Intersection;
-                    //calc diff
+                    result.CompResult = GetIntersect(r1, r2, insidePoints, borderPoints);
                 }
                 //if there are no border points nor inside points => the rectangles do not touch
                 else if (insidePoints.Count == 0 && borderPoints.Count == 0)
@@ -65,19 +72,7 @@ namespace Geometry.Business
                     result.Type = RelationshipType.None;
                     result.CompResult = null;
                 }
-                //all four points happen to be on the border, if  the area of the rectangles is identical, they are fully overlapping, otherwise they intersect with the smaller being the difference
-                else if (borderPoints.Count == 4)
-                {
-                    if (equalSize)
-                    {
-                        result.Type = RelationshipType.FullOverlap;
-                    }
-                    else //second is smaller
-                    {
-                        result.Type = RelationshipType.Intersection;
-                    }
-                    result.CompResult = r2;
-                }
+                
                 //touching, but not adjacent
                 else if (insidePoints.Count == 0 && borderPoints.Count == 1)
                 {
@@ -94,10 +89,12 @@ namespace Geometry.Business
                     else if (insidePoints.Count == 2)
                     {
                         result.Type = RelationshipType.Intersection;
+                        result.CompResult = GetIntersect(r1, r2, insidePoints, borderPoints);
                     }
                     else if (borderPoints.Count == 4)
                     {
                         result.Type = RelationshipType.Intersection;
+                        result.CompResult = GetIntersect(r1, r2, insidePoints, borderPoints);
                     } 
                 }
             }
@@ -146,6 +143,22 @@ namespace Geometry.Business
                         break;
                 }
             }
+        }
+
+        /// <summary>
+        /// Helper method to retrieve the area of the intersection provided by <see cref="RectangleDO"/>
+        /// </summary>
+        /// <param name="r1"></param>
+        /// <param name="r2"></param>
+        /// <param name="insidePoints"></param>
+        /// <param name="borderPoints"></param>
+        /// <returns></returns>
+        private IShape GetIntersect(RectangleDO r1, RectangleDO r2, List<PointDO> insidePoints, List<PointDO> borderPoints)
+        {
+            List<PointDO> combined = new List<PointDO>();
+            combined.AddRange(insidePoints);
+            combined.AddRange(borderPoints);
+            return r1.FindIntersect(combined, r2);
         }
 
 

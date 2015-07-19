@@ -46,15 +46,7 @@ namespace MvcApplication1.Controllers
                 model.Success = true;
                 if (rel.CompResult != null)
                 {
-                    List<PointDO>points = rel.CompResult.Points;
-                    if (points.Count == 2)
-                    {
-                        model.Diff = new LineDO(points[0], points[1]); 
-                    }
-                    else if (points.Count == 4)
-                    {
-                        model.Diff = new RectangleDO(points[0], points[1], points[2], points[3]); 
-                    }
+                    model.Diff = (Shape)rel.CompResult;
                 }
             }
             catch (Exception ex)

@@ -6,7 +6,7 @@ using System.Text;
 namespace Geometry.Text
 {
     /// <summary>
-    /// Encapsulates text segment for UI
+    /// Encapsulates a text segment for th epurposes of UI
     /// </summary>
     public class TextDO
     {

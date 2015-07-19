@@ -6,7 +6,9 @@ using System.Text;
 namespace Geometry.Text
 {
     /// <summary>
-    /// Singleton abstraction of application text. In real life, the text would be stored in a DB/caching system, resource files, etc
+    /// Singleton to coordinate retrieval of application text 0bjects. In real life, the text would be stored in a DB/caching system, resource files, etc. so that 
+    /// they can be managed. modified, translated, etc
+    /// For the purposes of this exercise, the literals are kept in an in-memory dictionary.
     /// </summary>
     public class TextFactory : IDisposable
     {
@@ -54,7 +56,7 @@ namespace Geometry.Text
             #region Intersection Messages
             langCache.Add("0", new TextDO("Separated", "We are completely independent", lang));
             langCache.Add("1", new TextDO("Intersection", "We are happily intersecting", lang));
-            langCache.Add("2", new TextDO("Containment", "Hey, I am comletely within the bounds of my larger buddy", lang));
+            langCache.Add("2", new TextDO("Containment", "Hey, I am comletely within the bounds of my larger buddy. Click on the red to make me draggable again.", lang));
             langCache.Add("3", new TextDO("Adjacency", "Snuggly rubbing each other's elbows", lang));
             langCache.Add("4", new TextDO("Full Overlap", "We are equal!", lang));
             langCache.Add("5", new TextDO("Touching", "We are touching each other, but it does not count as Adjacency", lang));

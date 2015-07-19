@@ -6,7 +6,7 @@ using System.Text;
 namespace Geometry.DataObjects
 {
    /// <summary>
-	/// This Class Provides FieldType ID's for Known System Types
+	/// Definitions of known relationship types
 	/// </summary>
     public class RelationshipType
     {

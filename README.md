@@ -31,7 +31,7 @@ The server side has following components:
 </p>
 
 <ul>
-	<li><b>Geometry.Business</b> - the library, where the algorythms to determin the interactions between the rectangles are implemented</li>
+	<li><b>Geometry.Business</b> - the library, where the algorythms to determine the interactions between the rectangles are implemented</li>
 	<li><b>Geometry.DataObjects</b> - the library of business entities used for computation and data transport. The entites are serializable pocos and objects with minimal intrinsic logic
 	 The application is working with several different geometrical objects that share a number of common features. These features are captured in an interface and a concrete 
 	base class that implements the interface.
@@ -57,7 +57,7 @@ The server side has following components:
 <br>
 <h3>Logic</h3>
 <p>
-To identify the type of interaction of the rectangles,  the application first determins which vertices of the smaller rectangle (if the diffirence in size is established) are 
+To identify the type of interaction of the rectangles,  the application first determines which vertices of the smaller rectangle (if the diffirence in size is established) are 
 located within the bounds of the other rectangle. Then, based on the number of the contained vertices and their position (within or on the border), the application establishes the type
 of interaction. In 70% of scenarios, the application can deliver the verdict at this stage. To account for the remainder of scenarios, the application repeats the initial operation but this time
 looking for vertices of the second rectangle that fall within the bounds of the first one. Once the type of interaction is established, 

@@ -8,7 +8,7 @@ using System.Text;
 namespace Geometry.DataObjects
 {
     /// <summary>
-    /// A simple 2 point line
+    /// A simple encapsulation of a 2 point line
     /// </summary>
     [Serializable()]
     [DataContract()]

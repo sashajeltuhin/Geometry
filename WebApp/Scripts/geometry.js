@@ -21,15 +21,22 @@
                 if (leftRemainder <= snapTolerance) {
                     ui.position.left = ui.position.left - leftRemainder;
                 }
-            },
-            stop: function (event, ui) {
-                updateIntersect();
+
                 if (this.id === 'bigguy') {
                     updateLoc(r1, ui.position);
                 }
                 else if (this.id == 'smallguy') {
                     updateLoc(r2, ui.position);
                 }
+            },
+            stop: function (event, ui) {
+                if (this.id === 'bigguy') {
+                    updateLoc(r1, ui.position);
+                }
+                else if (this.id == 'smallguy') {
+                    updateLoc(r2, ui.position);
+                }
+                checkRels();
             }
         });
 
@@ -37,7 +44,6 @@
             r.Top = loc.top;
             r.Left = loc.left;
             updateDims(r);
-            checkRels();
         }
 
         function initRectangles() {
@@ -73,6 +79,10 @@
                 r2.Height = $(this).val();
                 updateDims(r2);
                 checkRels();
+            });
+
+            $('#intersect').click(function () {
+                updateIntersect();
             });
             checkRels();
         }
@@ -126,7 +136,7 @@
         function updateIntersect(diff) {
             $('#intersect').width(0);
             $('#intersect').height(0);
-            $('#intersect').css({ 'border': 'solid black 1px' });
+            $("#intersect").addClass("borderless");
 
             if (diff) {
                 if (diff.Width == 0) {
