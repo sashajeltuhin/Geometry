@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryApp", "MvcApplication1\GeometryApp.csproj", "{AB427441-2179-4AB3-915D-9827EEB29767}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryApp", "WebApp\GeometryApp.csproj", "{AB427441-2179-4AB3-915D-9827EEB29767}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry.DataObjects", "Geometry.DataObjects\Geometry.DataObjects.csproj", "{B6361BFC-8653-4F9E-9266-A9AD396097F0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry.Business", "Geometry.Business\Geometry.Business.csproj", "{79CB0F3D-FF68-41EA-8662-71B11A72AD44}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry.Text", "Geometry.Text\Geometry.Text.csproj", "{81D5C137-B388-47B3-872A-DD34D522038C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15BCB70A-2920-4AF4-A7DB-AAC0D06D93B7}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
