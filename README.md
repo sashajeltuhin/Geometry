@@ -22,6 +22,9 @@ shapes can be adjusted in order to demonstrate all permutations of the interacti
 each rectangle can be changed by dragging them arround the grid area. Once the location changes, the application identifies the type of interaction and displays a corresponding message above the 
 grid area with the rectangles.
 
+<h3>Demo</h3>
+<p>Demo is available <a href="www.mooshpoochini.com">here</a>.
+
 <br>
 <h3>Topology and Architecture</h3>
 <p>The demonstration is implemented as a web application with a server-side component. The front end is done in HTML, CSS and javascript and relies on Jquery framework for dynamics of the rectangles 

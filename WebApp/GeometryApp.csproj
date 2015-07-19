@@ -103,6 +103,7 @@
     <Content Include="Scripts\geometry.js" />
     <Content Include="Scripts\jquery-1.10.js" />
     <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\touchpunch.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
