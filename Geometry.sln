@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryApp", "MvcApplication1\GeometryApp.csproj", "{AB427441-2179-4AB3-915D-9827EEB29767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry.DataObjects", "Geometry.DataObjects\Geometry.DataObjects.csproj", "{B6361BFC-8653-4F9E-9266-A9AD396097F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry.Business", "Geometry.Business\Geometry.Business.csproj", "{79CB0F3D-FF68-41EA-8662-71B11A72AD44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry.Text", "Geometry.Text\Geometry.Text.csproj", "{81D5C137-B388-47B3-872A-DD34D522038C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB427441-2179-4AB3-915D-9827EEB29767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB427441-2179-4AB3-915D-9827EEB29767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB427441-2179-4AB3-915D-9827EEB29767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB427441-2179-4AB3-915D-9827EEB29767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6361BFC-8653-4F9E-9266-A9AD396097F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6361BFC-8653-4F9E-9266-A9AD396097F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6361BFC-8653-4F9E-9266-A9AD396097F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6361BFC-8653-4F9E-9266-A9AD396097F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79CB0F3D-FF68-41EA-8662-71B11A72AD44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79CB0F3D-FF68-41EA-8662-71B11A72AD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79CB0F3D-FF68-41EA-8662-71B11A72AD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79CB0F3D-FF68-41EA-8662-71B11A72AD44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81D5C137-B388-47B3-872A-DD34D522038C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81D5C137-B388-47B3-872A-DD34D522038C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81D5C137-B388-47B3-872A-DD34D522038C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81D5C137-B388-47B3-872A-DD34D522038C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
