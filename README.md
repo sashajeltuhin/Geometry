@@ -23,7 +23,7 @@ each rectangle can be changed by dragging them arround the grid area. Once the l
 grid area with the rectangles.
 
 <h3>Demo</h3>
-<p>Demo is available <a href="www.mooshpoochini.com">here</a>.
+<p>Demo is available <a href="http://www.mooshpoochini.com">here</a>.
 
 <br>
 <h3>Topology and Architecture</h3>
