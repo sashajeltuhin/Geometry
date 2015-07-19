@@ -26,10 +26,10 @@ grid area with the rectangles.
 <h3>Topology and Architecture</h3>
 <p>The demonstration is implemented as a web application with a server-side component. The front end is done in HTML, CSS and javascript and relies on Jquery framework for dynamics of the rectangles 
 and to communicate with the server component via ajax.<br>
-The server facade is an MVC.net application in which the controller is employed as a service. <br>
+The server facade is an MVC.net application, in which the controller is employed as a service. <br>
 The server side has following components:
 </p>
-<br>
+
 <ul>
 	<li><b>Geometry.Business</b> - the library, where the algorythms to determin the interactions between the rectangles are implemented</li>
 	<li><b>Geometry.DataObjects</b> - the library of business entities used for computation and data transport. The entites are serializable pocos and objects with minimal intrinsic logic
@@ -55,15 +55,15 @@ The server side has following components:
 
 <br>
 <br>
-<h3>The logic</h3>
+<h3>Logic</h3>
 <p>
 To identify the type of interaction of the rectangles,  the application first determins which vertices of the smaller rectangle (if the diffirence in size is established) are 
 located within the bounds of the other rectangle. Then, based on the number of the contained vertices and their position (within or on the border), the application establishes the type
 of interaction. In 70% of scenarios, the application can deliver the verdict at this stage. To account for the remainder of scenarios, the application repeats the initial operation but this time
-looking for vertices of the second rectangle that fall within the bounds of the first one. Once the type of interaction is established, in the case of Intersction and Adjacency
-the application determines the coordinates of the overlapping zone, which may be either a rectangle or a line.<br>
+looking for vertices of the second rectangle that fall within the bounds of the first one. Once the type of interaction is established, 
+the application determines the coordinates of the overlapping zone in the case of Intersction and Adjacency. The result can be either a rectangle or a line.<br>
 The results of the analysis are delivered to the front end, where the interaction type with the corresponding message is communicated to the end-user and the intersecting area (if any) is
 shown in red.
-</p
+</p>
 
 
